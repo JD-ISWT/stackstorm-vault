@@ -1,6 +1,6 @@
-import json
 from lib import action
-import hvac 
+import hvac
+
 
 class VaultUnwrapSecretAction(action.VaultBaseAction):
     def run(self, token, profile_name=None):
@@ -8,6 +8,6 @@ class VaultUnwrapSecretAction(action.VaultBaseAction):
         try:
             resp = self.vault.sys.unwrap(token)
         except hvac.exceptions.InvalidRequest as e:
-            return(False, f"{e}")
-       
+            return (False, f"{e}")
+
         return (True, resp)
