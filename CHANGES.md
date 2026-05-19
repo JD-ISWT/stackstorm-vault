@@ -1,5 +1,10 @@
 # Change Log
 
+## 3.0.0
+
+- Removed pinning of hvac to support Python version >= 3.9 and add the sys.wrap/sys.unwrap methods.
+- Added wrap/unwrap actions
+
 ## 2.1.0
 
 - Support mount_point parameter for profiles config.
